@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<body>
+<head>
+    <title>Mijn titel</title>
+</head>
+
+<input id="invoer1" class="invoerveld" type="text">
+
+<input id="knop1" type="button" value="test" onclick="functie1()">
+<input id="knop2" type="button" value="plaatje">
+
+<div class="result"><br /></div>
+
+<img src="https://external-preview.redd.it/2idTcEDIY1WRvxQWqTh5JtTsfSGqhQVA0x-revDe2u0.jpg?auto=webp&s=069c54ca43ecc26c002bd366795870ebeb7e623d" width="200" onclick="playDefeat()">
+
+</body>
+
+</html>
+
+<style>
+
+    p{
+        color: blue;
+        padding: 5px;
+    }
+
+    #testId {
+        background-color: green;
+    }
+
+    .testClass{
+        border: 5px solid black;
+    }
+
+    #testId2 {
+        border-color: red;
+    }
+
+    input{
+        background-color:yellowgreen;
+    }
+
+</style>
+
+<script>
+
+    function functie1() { //eventListner
+        let naamVariabel = document.getElementById("invoer1").value;
+        alert("Hallo " + naamVariabel);
+        document.getElementById("testId2").innerHTML = "Hallo: " + naamVariabel;
+    }
+
+        let resEle = document.querySelector(".result");
+        let BtnEle = document.querySelector("#knop2");
+        let newImage = new Image(500,300);
+        newImage.src = "https://purepng.com/public/uploads/large/purepng.com-men-pointing-thumbs-upmanpeoplepersonsmalegesturespointing-thumbs-up-112152509791795hcj.png";
+        BtnEle.addEventListener("click", () => { 
+            resEle.appendChild(newImage);
+        })
+    
+    function playDefeat() {
+        var audio = document.getElementById("correct")
+        audio.play()
+
+        }
+
+</script>
+
+<audio id="correct" src="Elden Ring death sfx.mp3"></audio>
